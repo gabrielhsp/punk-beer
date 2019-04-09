@@ -12,6 +12,7 @@ class PunkBeerViewController: UIViewController {
     @IBOutlet weak var collectionViewBeersList: UICollectionView!
     
     private lazy var presenter = PunkBeerPresenter()
+    private static let viewControllerTitle = "Cervejas"
     private static let numberOfSectionsValue = 1
     private static let numberOfItensInSectionValue = 10
     
@@ -38,7 +39,7 @@ class PunkBeerViewController: UIViewController {
     }
     
     func setNavigationBarConfig() {
-        self.navigationItem.title = "Cervejas"
+        self.navigationItem.title = PunkBeerViewController.viewControllerTitle
     }
 }
 
