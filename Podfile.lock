@@ -1,0 +1,22 @@
+PODS:
+  - SDWebImage (5.0.0):
+    - SDWebImage/Core (= 5.0.0)
+  - SDWebImage/Core (5.0.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - SDWebImage
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SDWebImage
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: db80cb083df5e1d8c04ab6de99efa3a5f644bded
+
+COCOAPODS: 1.6.1
