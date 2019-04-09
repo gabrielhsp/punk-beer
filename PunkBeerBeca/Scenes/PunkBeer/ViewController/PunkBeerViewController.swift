@@ -11,6 +11,7 @@ import UIKit
 class PunkBeerViewController: UIViewController {
     @IBOutlet weak var collectionViewBeersList: UICollectionView!
     
+    private lazy var presenter = PunkBeerPresenter()
     private static let numberOfSectionsValue = 1
     private static let numberOfItensInSectionValue = 10
     
@@ -28,9 +29,12 @@ class PunkBeerViewController: UIViewController {
         self.collectionViewBeersList.delegate = self
         self.collectionViewBeersList.dataSource = self
         self.collectionViewBeersList.register(BeerItemListCollectionViewCell.instanceOfNib(), forCellWithReuseIdentifier: BeerItemListCollectionViewCell.identifier)
-        self.collectionViewBeersList.reloadData()
         
-        setNavigationBarConfig()
+        self.presenter.loadBeers(callback: { beers in
+            self.collectionViewBeersList.reloadData()
+        })
+        
+        self.setNavigationBarConfig()
     }
     
     func setNavigationBarConfig() {
@@ -62,5 +66,11 @@ extension PunkBeerViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailsBeerViewController = DetailsBeerViewController()
+        
+        self.navigationController?.pushViewController(detailsBeerViewController, animated: true)
     }
 }
