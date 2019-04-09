@@ -52,7 +52,14 @@ class PunkBeerPresenter: NSObject {
                 
                 do {
                     let json = try decoder.decode([Beer].self, from: data!)
-                    print(json)
+                    
+                    /**
+                     * Here we pass our json decoded to our callback closure inside the Main thread
+                     * This response needs to be inside the Main thread to our app have access inside all data requested
+                     */
+                    DispatchQueue.main.async {
+                        callback(json)
+                    }
                 } catch {
                     print("☠️☠️☠️ Não consegui fazer o parse da API ☠️☠️☠️")
                 }

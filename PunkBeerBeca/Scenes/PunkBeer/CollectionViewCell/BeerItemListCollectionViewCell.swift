@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BeerItemListCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var imageViewBeer: UIImageView!
@@ -24,9 +25,13 @@ class BeerItemListCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    /** Method to create beer item list filling name and image of the beer */
-    func setBeerProperties(name: String, image: UIImage) {
-        self.labelBeerName.text = name
-        self.imageViewBeer.image = image
+    /** Method to set parameters inside beer */
+    func set(beer: Beer) {
+        guard let url = URL(string: beer.imageUrl!) else {
+            return
+        }
+        
+        self.imageViewBeer.sd_setImage(with: url)
+        self.labelBeerName.text = beer.name
     }
 }

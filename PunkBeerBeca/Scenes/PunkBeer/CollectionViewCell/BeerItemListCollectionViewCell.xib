@@ -26,15 +26,15 @@
                             <constraint firstAttribute="height" constant="150" id="mM5-5t-nP0"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da cerveja" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKh-YL-j8C">
-                        <rect key="frame" x="8" y="166" width="159" height="14.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da cerveja" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKh-YL-j8C">
+                        <rect key="frame" x="8" y="166" width="159" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <color key="textColor" red="0.079325787723064423" green="0.0018950265366584063" blue="0.29021599888801575" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.88669341800000001" green="0.50094461440000004" blue="0.27443560960000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="IPB-eb-7HV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="NXP-DW-k6K"/>
                 <constraint firstItem="IPB-eb-7HV" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="W4k-B5-jOM"/>
