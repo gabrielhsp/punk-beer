@@ -12,6 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsBeerViewController" customModule="PunkBeerBeca" customModuleProvider="target">
             <connections>
+                <outlet property="imageViewBeerImage" destination="nG2-UO-KDq" id="9TM-Cg-Uc9"/>
+                <outlet property="labelBeerDateRegister" destination="MYl-z7-J2W" id="azm-Vi-AHb"/>
+                <outlet property="labelBeerName" destination="86v-Ye-Mni" id="mo4-5p-7dW"/>
+                <outlet property="labelBeerTagline" destination="fqR-tQ-XMh" id="qGs-Lh-wj5"/>
+                <outlet property="textViewBeerDescription" destination="mHH-VU-b4x" id="Krj-WB-Usm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,26 +32,26 @@
                         <constraint firstAttribute="width" constant="150" id="BbQ-nZ-Owf"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybF-Sl-Bqz">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybF-Sl-Bqz">
                     <rect key="frame" x="166" y="28" width="146" height="200"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da cerveja" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86v-Ye-Mni">
-                            <rect key="frame" x="0.0" y="0.0" width="146" height="50"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da cerveja" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86v-Ye-Mni">
+                            <rect key="frame" x="0.0" y="0.0" width="146" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="gWB-cL-3tt"/>
+                                <constraint firstAttribute="height" constant="45" id="gWB-cL-3tt"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                             <color key="textColor" red="0.45340679189999999" green="0.13463740299999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data de cadastro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYl-z7-J2W">
-                            <rect key="frame" x="0.0" y="81" width="146" height="15"/>
+                            <rect key="frame" x="0.0" y="76" width="146" height="15"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tagline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-tQ-XMh">
-                            <rect key="frame" x="0.0" y="58" width="146" height="15"/>
+                            <rect key="frame" x="0.0" y="53" width="146" height="15"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -68,30 +73,38 @@
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mHH-VU-b4x">
-                    <rect key="frame" x="8" y="236" width="304" height="324"/>
+                    <rect key="frame" x="8" y="261" width="304" height="299"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nb-L5-8Hq">
+                    <rect key="frame" x="8" y="244" width="304" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nG2-UO-KDq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="4X8-cb-mIj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mHH-VU-b4x" secondAttribute="bottom" constant="8" id="87g-rY-Hag"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Nb-L5-8Hq" secondAttribute="trailing" constant="8" id="E4N-m0-hhG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ybF-Sl-Bqz" secondAttribute="trailing" constant="8" id="Ga4-d7-hL7"/>
                 <constraint firstItem="ybF-Sl-Bqz" firstAttribute="leading" secondItem="nG2-UO-KDq" secondAttribute="trailing" constant="8" id="Gba-Lt-qSR"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mHH-VU-b4x" secondAttribute="trailing" constant="8" id="Ja1-T7-wN3"/>
+                <constraint firstItem="mHH-VU-b4x" firstAttribute="top" secondItem="7Nb-L5-8Hq" secondAttribute="bottom" id="I5w-lW-32z"/>
                 <constraint firstItem="ybF-Sl-Bqz" firstAttribute="leading" secondItem="nG2-UO-KDq" secondAttribute="trailing" constant="8" id="QeK-Eu-Iii"/>
                 <constraint firstItem="ybF-Sl-Bqz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="TYm-Kw-KyR"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mHH-VU-b4x" secondAttribute="bottom" constant="8" id="Vwh-CV-RpT"/>
-                <constraint firstItem="mHH-VU-b4x" firstAttribute="top" secondItem="ybF-Sl-Bqz" secondAttribute="bottom" constant="8" id="XK1-s2-3Pf"/>
-                <constraint firstItem="mHH-VU-b4x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="e5n-sn-1De"/>
+                <constraint firstItem="7Nb-L5-8Hq" firstAttribute="top" secondItem="nG2-UO-KDq" secondAttribute="bottom" constant="16" id="ZjZ-dG-72F"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mHH-VU-b4x" secondAttribute="trailing" constant="8" id="bIV-2L-LOD"/>
                 <constraint firstItem="nG2-UO-KDq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="pug-C1-Vvi"/>
-                <constraint firstItem="mHH-VU-b4x" firstAttribute="top" secondItem="nG2-UO-KDq" secondAttribute="bottom" constant="8" id="wnz-0J-bi9"/>
+                <constraint firstItem="mHH-VU-b4x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="sjI-pd-ozb"/>
+                <constraint firstItem="7Nb-L5-8Hq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="vtv-4H-444"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="138.75" y="117.25352112676056"/>
+            <point key="canvasLocation" x="76.875" y="148.94366197183098"/>
         </view>
     </objects>
 </document>

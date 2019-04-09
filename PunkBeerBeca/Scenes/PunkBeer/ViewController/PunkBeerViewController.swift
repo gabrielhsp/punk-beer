@@ -66,7 +66,6 @@ extension PunkBeerViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionViewBeersList.bounds.width / 2) - 8
         let height = PunkBeerViewController.heightOfCellItem
-        // let height = (collectionViewBeersList.bounds.height / 2)
         
         return CGSize(width: width, height: height)
     }
@@ -76,7 +75,8 @@ extension PunkBeerViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailsBeerViewController = DetailsBeerViewController()
+        let beer = beers[indexPath.item]
+        let detailsBeerViewController = DetailsBeerViewController(beer: beer)
         
         self.navigationController?.pushViewController(detailsBeerViewController, animated: true)
     }

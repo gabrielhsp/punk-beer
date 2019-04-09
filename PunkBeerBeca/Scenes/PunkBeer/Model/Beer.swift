@@ -12,10 +12,9 @@ class Beer: Codable {
     var id = 0
     var name: String?
     var imageUrl: String?
-    var abv: Double?
-    var ibu: Double?
     var tagline: String?
     var description: String?
+    var date: String?
 
     /**
      * This enumerator is responsable to let available keys inside our API response
@@ -25,9 +24,8 @@ class Beer: Codable {
         case id
         case name
         case imageUrl = "image_url"
-        case abv
-        case ibu
         case tagline
         case description
+        case date = "first_brewed"
     }
 }
