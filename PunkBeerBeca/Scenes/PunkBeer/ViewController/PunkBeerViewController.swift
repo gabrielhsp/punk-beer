@@ -69,15 +69,27 @@ class PunkBeerViewController: UIViewController {
     }
 }
 
+/**
+ * Here we create an extension of our ViewController to let our code more organized
+ * Inside our extension, we make the the extends of Delegate, DataSource and DelegateFlowLayout of our CollectionView
+ * When we make the extension, we need to implement the methods from those extended classes
+ */
 extension PunkBeerViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    /** At this method, we define the number of sections inside our CollectionView */
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return PunkBeerViewController.numberOfSectionsValue
     }
     
+    /** At this method, we define the number of items inside our section using the count of our array of Beer */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return beers.count
     }
     
+    /**
+     * At this method, we define the cell that will be used inside our CollectionView
+     * To define the cell of our CollectionView, we use the method `dequeueReusableCell` of our CollectionView
+     * Then we use the `set` method of our cell to pass each item of our array of beers
+     */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BeerItemListCollectionViewCell", for: indexPath) as! BeerItemListCollectionViewCell
         
@@ -86,6 +98,11 @@ extension PunkBeerViewController: UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     
+    /**
+     * At this method, we define the width and height of our cell inside our CollectionView
+     * The width and height must be defined as a CGSize attribute
+     * This method needs to return a CGSize object with width and height defined
+     */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionViewBeersList.bounds.width / 2) - 8
         let height = PunkBeerViewController.heightOfCellItem
@@ -93,10 +110,15 @@ extension PunkBeerViewController: UICollectionViewDelegate, UICollectionViewData
         return CGSize(width: width, height: height)
     }
     
+    /** At this method, we define the minimum spacing of each item of our cell */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 8
     }
     
+    /**
+     * At this method, we define what's going to be the action when the user click inside our CollectionViewCell
+     * When the user tap inside our CollectionView we push the new ViewController using the navigationControlller push method
+     */
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let beer = beers[indexPath.item]
         let detailsBeerViewController = DetailsBeerViewController(beer: beer)
